@@ -1,0 +1,243 @@
+// Utility Color Classes
+
+//.success {
+//
+//}
+
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+
+$fjord: #8289fc; //purple 
+$persimmon: #eb3569; //pink
+$aqua: #4FD0E3; //teal
+$sea-green: #4AD1CC; //green
+$lagoon: $aqua; //teal
+$koromiko: #FFC53A; //yellow
+$blue-stone: #3C72F3; //blue
+$shuttle-grey: #8392A0; //grey
+
+$vol-purple: $fjord; //purple
+$vol-red: $persimmon; //pink
+$vol-turquoise: $aqua; //teal
+$vol-green: $sea-green; //green
+$vol-teal: $lagoon; //teal
+$vol-yellow: $koromiko; //yellow
+$vol-blue: $blue-stone; //blue
+$vol-grey: $shuttle-grey; //greu
+
+$old-dark-blue: $fjord;
+$old-orange: $persimmon;      
+$old-green: $aqua;            
+$old-light-blue: $sea-green;  
+$old-blue: $lagoon;           
+
+$red: (
+  "lighten-2":  #F8B5C8,
+  "lighten-1":  #F8B5C8,
+  "base":       $vol-red,
+  "darken-1":   #DF164F
+);
+$pink: (
+  "lighten-2":  #F8B5C8,
+  "lighten-1":  #F8B5C8,
+  "base":       $vol-red,
+  "darken-1":   #DF164F
+);
+
+$purple: (
+  "lighten-2":  #AFB3FD,
+  "lighten-1":  #AFB3FD,
+  "base":       $vol-purple,
+  "darken-1":   #6068FB
+);
+
+$blue: (
+  "lighten-2":  #6691F5,
+  "lighten-1":  #6691F5,
+  "base":       $vol-blue,
+  "darken-1":   #013c48
+);
+
+$teal: (
+  "lighten-2":  #83DEEC,
+  "lighten-1":  #83DEEC,
+  "base":       $vol-teal,
+  "darken-1":   #1EACC2
+);
+
+$turquoise: (
+  "lighten-2":  #83DEEC,
+  "lighten-1":  #83DEEC,
+  "base":       $vol-teal,
+  "darken-1":   #1EACC2
+);
+
+$green: (
+  "lighten-2":  #8DE2DF,
+  "lighten-1":  #8DE2DF,
+  "base":       $vol-green,
+  "darken-1":   #2EB2AE
+);
+
+$yellow: (
+  "lighten-2":  #FFD470,
+  "lighten-1":  #FFD470,
+  "base":       $vol-yellow,
+  "darken-1":   #F5AB00
+);
+
+$grey: (
+  "lighten-3":  #E3E8ED,
+  "lighten-2":  #C3CFDB,
+  "lighten-1":  #A1ACBA,
+  "base":       $vol-grey,
+  "darken-1":   #3A4E60,
+  "darken-2":   #132333,
+  "darken-3":   #0F1A24
+);
+
+
+$black:        #000000;
+$white:        #FFFFFF;
+$trans-white:  rgba(255, 255, 255, 0.85);
+$transparent:  transparent;
+
+$shades: (
+  "black":        $black,
+  "white":        $white
+);
+
+$transparent-shades: (
+  "trans-white":  $trans-white,
+  "transparent":  $transparent
+);
+
+$colors: (
+  "pink": $pink,
+  "purple": $purple,
+  "blue": $blue,
+  "teal": $teal,
+  "green": $green,
+  "yellow": $yellow,
+  "grey": $grey,
+  "shades": $shades,
+  "turquoise": $teal,
+  "red": $pink
+);
+
+
+// Color Classes
+
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .text-#{$color_name} {
+        color: $color_value !important;
+      }
+      .border-#{$color_name} {
+        border-color: $color_value !important;
+      }
+      .btn.#{$color_name}:hover {
+        background-color: darken( $color_value, 7% ) !important;
+      }
+      .btn.text-#{$color_name}:hover {
+        color: darken( $color_value, 15% ) !important;
+      }
+      .btn.border-#{$color_name}:hover {
+        border-color: darken( $color_value, 15% ) !important;
+      }
+      a.text-#{$color_name}:hover {
+        color: lighten( $color_value, 10% ) !important;
+      }
+    }
+    @else {
+      .#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .text-#{$color_name}.text-#{$color_type} {
+        color: $color_value !important;
+      }
+      .border-#{$color_name}.border-#{$color_type} {
+        border-color: $color_value !important;
+      }
+    }
+  }
+}
+
+// Shade classes
+@each $color, $color_value in $shades {
+  .#{$color} {
+    background-color: $color_value !important;
+  }
+  .text-#{$color} {
+    color: $color_value !important;
+  }
+  .border-#{$color} {
+    border-color: $color_value !important;
+  }
+  .btn.border-#{$color} {
+    border-color: $color_value!important;
+  }
+  .btn.border-#{$color}:hover {
+    border-color: rgba($color_value, 0.3)!important;
+  }
+  .btn.text-#{$color} {
+    color: $color_value!important;
+  }
+  .btn.text-#{$color}:hover {
+    color: $color_value!important;
+    opacity: 1;
+  }
+  .btn.#{$color} {
+    background-color: $color_value!important;
+  }
+  .btn.#{$color}:hover {
+    background-color: rgba($color_value, 0.7)!important;
+  }
+}
+
+// Transparent Classes
+@each $color, $color_value in $transparent-shades {
+  .#{$color} {
+    background-color: $color_value !important;
+  }
+  .text-#{$color} {
+    color: $color_value !important;
+  }
+  .border-#{$color} {
+    border-color: $color_value !important;
+  }
+}
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown '#{name}' in $colors.";
+  @return null;
+}
+
+
+// Borders
+.border,
+[class^="border-"],
+[class*=' border-'] {
+  border-style: solid!important;
+  border-width: 1px!important;
+}
+.border-none {border-width: 0px 0px 0px 0px!important;}
+.border-top {border-width: 1px 0px 0px 0px!important;}
+.border-right {border-width: 0px 1px 0px 0px!important;}
+.border-bottom {border-width: 0px 0px 1px 0px!important;}
+.border-left {border-width: 0px 0px 0px 1px!important;}
+
+
+

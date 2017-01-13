@@ -1,0 +1,261 @@
+$form-field-height: 3rem;
+$field-border: 1px solid color("grey","lighten-2");
+$field-padding-v: .5rem;
+$field-padding-h: 1rem;
+$field-padding: $field-padding-v $field-padding-h;
+
+.form-boxed {
+// Text inputs
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea,
+textarea.materialize-textarea {
+
+  // General Styles
+  background-color: transparent;
+  border: $field-border;//changed
+  border-radius: 0;
+  outline: none;
+  height: $form-field-height;
+  width: 100%;
+
+  font-size: 1rem;
+  margin: 0 0 15px 0;
+  padding: $field-padding;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: all .3s;
+
+
+  // Disabled input style
+  &:disabled, &[readonly="readonly"] {
+    color: $input-disabled-color;
+    border-bottom: $field-border;
+    opacity: .7;
+  }
+  // Disabled label style
+  &:disabled+label, &[readonly="readonly"]+label {
+    color: $input-disabled-color;
+  }
+  // Focused input style
+  &:focus:not([readonly]) {
+    border: $field-border;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);;
+  }
+  // Focused label style
+  &:focus:not([readonly])+label {
+    color: $input-focus-color;
+  }
+  // Valid Input Style
+  &.valid,
+  &:focus.valid {
+    border: $field-border;
+    box-shadow: none;
+  }
+  // Custom Success Message
+  &.valid + label:after,
+  &:focus.valid + label:after {
+    content: attr(data-success);
+    color: $input-success-color;
+    opacity: 1;
+  }
+  // Invalid Input Style
+  &.invalid,
+  &:focus.invalid {
+    border: 1px solid color("red","lighten-2");
+    box-shadow: none;
+  }
+  // Custom Error message
+  &.invalid + label:after,
+  &:focus.invalid + label:after {
+    content: attr(data-error);
+    color: $input-error-color;
+    opacity: 1;
+  }
+
+  // Form Message Shared Styles
+  & + label:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 65px;
+    opacity: 0;
+    transition: .2s opacity ease-out, .2s color ease-out;
+  }
+}
+
+// Styling for input field wrapper
+.input-field {
+  position: relative;
+  margin-top: 1.5rem;
+
+  label {
+    color: $input-border-color;
+    position: absolute;
+    top: 0.8rem;
+    left: $gutter-width / 2;
+    font-size: $label-font-size;
+    transform: translateY(-180%);
+    cursor: text;
+    transition: .2s ease-out;
+  }
+  label.active {
+
+  }
+
+  // Prefix Icons
+  .prefix {
+    position: absolute;
+    width: 3rem;
+    font-size: 2rem;
+    transition: color .2s;
+
+    &.active { color: $input-focus-color; }
+  }
+  .prefix ~ input,
+  .prefix ~ textarea {
+    margin-left: 3rem;
+    width: 92%;
+    width: calc(100% - 3rem);
+  }
+  .prefix ~ textarea { padding-top: .8rem; }
+  .prefix ~ label { margin-left: 3rem; }
+
+  @media #{$medium-and-down} {
+    .prefix ~ input {
+      width: 86%;
+      width: calc(100% - 3rem);
+    }
+  }
+  @media #{$small-and-down} {
+    .prefix ~ input {
+      width: 80%;
+      width: calc(100% - 3rem);
+    }
+  }
+}
+
+
+// Default textarea
+textarea {
+  width: 100%;
+  background-color: transparent;
+  padding: .75rem 1rem;
+  height: 3rem;
+  min-height: $form-field-height;
+
+  &.materialize-textarea {
+    overflow-y: hidden; /* prevents scroll bar flash */
+    padding: .75rem 1rem;
+    resize: none;
+    min-height: $form-field-height;
+  }
+}
+
+/***************
+  Select Field
+***************/
+.select-label {
+  position: absolute;
+}
+
+.select-wrapper {
+  position: relative;
+
+  input.select-dropdown {
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: $field-border;
+    outline: none;
+    height: 3rem;
+    line-height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: $field-padding-v 1.5rem $field-padding-v $field-padding-h;
+    display: block;
+  }
+
+  span.caret {
+    color: initial;
+    position: absolute;
+    right: 1rem;
+    top: 16px;
+    font-size: 10px;
+    &.disabled {
+      color: $input-disabled-color;
+    }
+  }
+
+  & + label {
+    font-size: $label-font-size;
+  }
+}
+
+// select { display: none; }
+// select.browser-default { display: block; }
+
+// Disabled styles
+select:disabled {
+  color: rgba(0,0,0,.3);
+}
+
+.select-wrapper input.select-dropdown:disabled {
+  color: rgba(0,0,0,.3);
+  cursor: default;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -ms-user-select: none; /* IE10+ */
+  border-bottom: 1px solid $field-border;
+}
+
+.select-wrapper i {
+  color: rgba(0,0,0,.3);
+}
+
+.select-dropdown li.disabled,
+.select-dropdown li.disabled > span,
+.select-dropdown li.optgroup {
+  color: rgba(0,0,0,.3);
+  background-color: transparent;
+}
+
+// Icons
+.select-dropdown li {
+  img {
+    height: $dropdown-item-height - 10;
+    width: $dropdown-item-height - 10;
+    margin: 5px 15px;
+    float: right;
+  }
+}
+
+// Optgroup styles
+.select-dropdown li.optgroup {
+  border-top: 1px solid $dropdown-hover-bg-color;
+
+  &.selected > span {
+    color: rgba(0, 0, 0, .7);
+  }
+
+  & > span {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  & ~ li:not(.optgroup) {
+    padding-left: 1rem;
+  }
+}
+
+
+}
