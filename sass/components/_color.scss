@@ -9,7 +9,7 @@
 $fjord: #8268FC; //purple 
 $persimmon: #EE5883; //pink
 $aqua: #25CED1; //turquoise
-$sea-green: #4AD1CC; //green
+$sea-green: #00DD7E; //green
 $lagoon: $aqua; //turquoise
 $koromiko: #FFC53A; //yellow
 $blue-stone: #31DBFE; //blue
@@ -17,7 +17,7 @@ $shuttle-grey: #8392A0; //grey
 //$error: $A90F33; //red
 
 $vol-purple: $fjord; //purple
-$vol-red: #A90F33; //red
+$vol-red: #EB1E4E; //red
 $vol-pink: $persimmon; //pink
 $vol-turquoise: $aqua; //turquoise
 $vol-green: $sea-green; //green
@@ -80,10 +80,10 @@ $turquoise: (
 );
 
 $green: (
-  "lighten-2":  #8DE2DF,
-  "lighten-1":  #8DE2DF,
+  "lighten-2":  #EDFCF5,
+  "lighten-1":  #EDFCF5,
   "base":       $vol-green,
-  "darken-1":   #2EB2AE
+  "darken-1":   #1DAF68
 );
 
 $yellow: (
