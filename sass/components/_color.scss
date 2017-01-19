@@ -6,20 +6,22 @@
 
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
-$fjord: #8289fc; //purple 
-$persimmon: #eb3569; //pink
-$aqua: #4FD0E3; //teal
+$fjord: #8268FC; //purple 
+$persimmon: #EE5883; //pink
+$aqua: #25CED1; //turquoise
 $sea-green: #4AD1CC; //green
-$lagoon: $aqua; //teal
+$lagoon: $aqua; //turquoise
 $koromiko: #FFC53A; //yellow
-$blue-stone: #3C72F3; //blue
+$blue-stone: #31DBFE; //blue
 $shuttle-grey: #8392A0; //grey
+//$error: $A90F33; //red
 
 $vol-purple: $fjord; //purple
-$vol-red: $persimmon; //pink
-$vol-turquoise: $aqua; //teal
+$vol-red: #A90F33; //red
+$vol-pink: $persimmon; //pink
+$vol-turquoise: $aqua; //turquoise
 $vol-green: $sea-green; //green
-$vol-teal: $lagoon; //teal
+$vol-teal: $lagoon; //turquoise
 $vol-yellow: $koromiko; //yellow
 $vol-blue: $blue-stone; //blue
 $vol-grey: $shuttle-grey; //greu
@@ -31,44 +33,50 @@ $old-light-blue: $sea-green;
 $old-blue: $lagoon;           
 
 $red: (
-  "lighten-2":  #F8B5C8,
-  "lighten-1":  #F8B5C8,
+  "lighten-2":  #FDECF0,
+  "lighten-1":  #FDECF0,
   "base":       $vol-red,
-  "darken-1":   #DF164F
+  "darken-1":   #A90F33
+);
+$error: (
+  "lighten-2":  #FDECF0,
+  "lighten-1":  #FDECF0,
+  "base":       $vol-red,
+  "darken-1":   #A90F33
 );
 $pink: (
-  "lighten-2":  #F8B5C8,
-  "lighten-1":  #F8B5C8,
-  "base":       $vol-red,
-  "darken-1":   #DF164F
+  "lighten-2":  #FDECF1,
+  "lighten-1":  #FDECF1,
+  "base":       $vol-pink,
+  "darken-1":   #EB3569
 );
 
 $purple: (
-  "lighten-2":  #AFB3FD,
-  "lighten-1":  #AFB3FD,
+  "lighten-2":  #EFECFE,
+  "lighten-1":  #EFECFE,
   "base":       $vol-purple,
-  "darken-1":   #6068FB
+  "darken-1":   #6749F5
 );
 
 $blue: (
-  "lighten-2":  #6691F5,
-  "lighten-1":  #6691F5,
+  "lighten-2":  #AEF1FF,
+  "lighten-1":  #AEF1FF,
   "base":       $vol-blue,
-  "darken-1":   #013c48
+  "darken-1":   #01BADF
 );
 
 $teal: (
-  "lighten-2":  #83DEEC,
-  "lighten-1":  #83DEEC,
-  "base":       $vol-teal,
-  "darken-1":   #1EACC2
+  "lighten-2":  #CBF5F6,
+  "lighten-1":  #CBF5F6,
+  "base":       $vol-turquoise,
+  "darken-1":   #1FABAD
 );
 
 $turquoise: (
-  "lighten-2":  #83DEEC,
-  "lighten-1":  #83DEEC,
-  "base":       $vol-teal,
-  "darken-1":   #1EACC2
+  "lighten-2":  #CBF5F6,
+  "lighten-1":  #CBF5F6,
+  "base":       $vol-turquoise,
+  "darken-1":   #1FABAD
 );
 
 $green: (
@@ -79,20 +87,20 @@ $green: (
 );
 
 $yellow: (
-  "lighten-2":  #FFD470,
-  "lighten-1":  #FFD470,
+  "lighten-2":  #FFF3D6,
+  "lighten-1":  #FFF3D6,
   "base":       $vol-yellow,
-  "darken-1":   #F5AB00
+  "darken-1":   #E09D00
 );
 
 $grey: (
-  "lighten-3":  #E3E8ED,
+  "lighten-3":  #F4F8F9,
   "lighten-2":  #C3CFDB,
   "lighten-1":  #A1ACBA,
   "base":       $vol-grey,
   "darken-1":   #3A4E60,
-  "darken-2":   #132333,
-  "darken-3":   #0F1A24
+  "darken-2":   #211c41,
+  "darken-3":   #07060e
 );
 
 
@@ -120,8 +128,9 @@ $colors: (
   "yellow": $yellow,
   "grey": $grey,
   "shades": $shades,
-  "turquoise": $teal,
-  "red": $pink
+  "turquoise": $turquoise,
+  "red": $red,
+  "error": $error
 );
 
 
