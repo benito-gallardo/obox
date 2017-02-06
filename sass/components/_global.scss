@@ -18,12 +18,12 @@ main {
 }
 
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-	color: $link-color;
-	text-decoration: none;
+  color: $link-color;
+  text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   -moz-transition:  all .2s;
   -o-transition: all .2s;
@@ -31,9 +31,10 @@ a {
   transition: all .2s;
   &:hover {
     cursor: pointer;
+
   }
 }
-a:not(.btn) {
+a:not(.btn):not(.btn-square):not(.btn-small-square):not(.btn-large-square):not(.breadcrumb) {
   &:hover {
     color: $link-hover-color;
   }
@@ -521,7 +522,7 @@ td, th{
 // Made less specific to allow easier overriding
 .secondary-content {
   float: right;
-  color: $secondary-color;
+  color: $primary-color;
 }
 .collapsible .collection {
   margin: 0;

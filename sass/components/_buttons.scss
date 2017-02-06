@@ -1,32 +1,66 @@
 // shared styles
 .btn, .btn-flat {
   border: none;
-  border-radius: 4px;
+  // border-radius: 4px;
   display: inline-block;
-  height: $button-height;
-  line-height: $button-line-height;
+  // height: $button-height;
+  // line-height: $button-line-height;
   // margin-bottom: 15px;
   outline: 0;
-  padding: 0 2.2em;
-  text-transform: none;
+  border-radius: 100px;
+  // padding: 0 2.2em;
+  height: 2.5rem;
+  line-height: 2.375rem;
+  padding: 0 1.188em;
+  // text-transform: none;
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
+  &:active{
+    background-color:color("green", "darken-1");
+  }
 }
 
+.btn-square{
+  border:none;
+  display: inline-block;
+  border-radius:0;
+  outline: 0;
+  height: 3.125rem;
+  line-height: 3rem;
+  padding: 0px 1.657em;
+  // text-transform: none;
+  vertical-align: middle;
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+  &:active{
+    background-color:color("green", "darken-1");
+  }
+}
 // Large button
 .btn-large {
   @extend .btn;
   @media #{$medium-and-up} {
-    font-size: 1.566rem;
-    height: 3.375rem;
-    line-height: 3.31rem;
-    i {
-      font-size: 1.566rem;
-    }
+    height: 3.75rem;
+    line-height: 3.7rem;
+    padding: 0 2.907rem;
+    // i {
+    //   font-size: 1.566rem;
+    // }
   }
 }
-
+// Large button
+.btn-large-square {
+  @extend .btn-square;
+  @media #{$medium-and-up} {
+    height: 3.75rem;
+    line-height: 3.7rem;
+    padding: 0 2.907rem;
+    // i {
+    //   font-size: 1.566rem;
+    // }
+  }
+}
 .btn-small {
   @extend .btn;
   font-size: 0.81rem;
@@ -37,7 +71,16 @@
     font-size: 0.81rem;
   }
 }
-
+.btn-small-square {
+  @extend .btn-square;
+  font-size: 0.81rem;
+  height: 2.69rem;
+  line-height: 2.63rem;
+  font-weight: 600;
+  i {
+    font-size: 0.81rem;
+  }
+}
 // Disabled shared style
 .btn.disabled,
 .btn-floating.disabled,
@@ -73,7 +116,7 @@
 }
 
 // Raised Button
-.btn {
+.btn,.btn-square {
   text-decoration:none;
   color: $button-color-raised;
   background-color: $button-color;
@@ -222,3 +265,5 @@ button.btn-floating {
 .btn-block {
   display: block;
 }
+.btn-round {border-radius: 100px;}
+.btn-shadow {box-shadow: rgba(0, 0, 0, 0.15) 0 7px 20px;}

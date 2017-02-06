@@ -501,8 +501,8 @@ form p:last-child {
       top: 0px;
       width: 20px;
       height: 20px;
-      border: 2px solid $secondary-color;
-      background-color: $secondary-color;
+      border: 2px solid $primary-color;
+      background-color: $primary-color;
       z-index: 0;
     }
   }
@@ -619,7 +619,7 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
   input.select-dropdown {
     position: relative;
     cursor: pointer;
-    // color: #444;
+    color: $dropdown-color;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $input-border-color;
@@ -675,7 +675,6 @@ select:disabled {
 .select-dropdown li.disabled,
 .select-dropdown li.disabled > span,
 .select-dropdown li.optgroup {
-  color: rgba(0,0,0,.3);
   background-color: transparent;
 }
 

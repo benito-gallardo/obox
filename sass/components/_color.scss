@@ -7,24 +7,26 @@
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
 $fjord: #8268FC; //purple 
-$persimmon: #EE5883; //pink
-$aqua: #25CED1; //turquoise
-$sea-green: #00DD7E; //green
+$persimmon: #EB3569; //pink
+$aqua: #4FD0E3; //turquoise
+$sea-green: #3BD2A2; //green
 $lagoon: $aqua; //turquoise
 $koromiko: #FFC53A; //yellow
-$blue-stone: #31DBFE; //blue
-$shuttle-grey: #8392A0; //grey
+$blue-stone: #2196F3; //blue
+$shuttle-grey: #9E9E9E; //grey
 //$error: $A90F33; //red
 
 $vol-purple: $fjord; //purple
-$vol-red: #EB1E4E; //red
+$vol-red: #E62A10; //red
 $vol-pink: $persimmon; //pink
 $vol-turquoise: $aqua; //turquoise
 $vol-green: $sea-green; //green
 $vol-teal: $lagoon; //turquoise
 $vol-yellow: $koromiko; //yellow
 $vol-blue: $blue-stone; //blue
-$vol-grey: $shuttle-grey; //greu
+$vol-grey: $shuttle-grey; //grey
+$vol-blue-grey: #607D8B;//blue-grey
+$vol-rich-purple: #181432;//rich-purple
 
 $old-dark-blue: $fjord;
 $old-orange: $persimmon;      
@@ -33,74 +35,188 @@ $old-light-blue: $sea-green;
 $old-blue: $lagoon;           
 
 $red: (
-  "lighten-2":  #FDECF0,
-  "lighten-1":  #FDECF0,
+  "lighten-5":  #FDE0DB,
+  "lighten-4":  #FABEBA,
+  "lighten-3":  #F79A84,
+  "lighten-2":  #F46F5A,
+  "lighten-1":  #E95337,
   "base":       $vol-red,
-  "darken-1":   #A90F33
+  "darken-1":   #DE2706,
+  "darken-2":   #D12400,
+  "darken-3":   #C52100,
+  "darken-4":   #B11D00,
+  "a-100":      #FF7E96,
+  "a-200":      #FF5975,
+  "a-400":      #FF3C6E,
+  "a-700":      #E11D2A
 );
 $error: (
-  "lighten-2":  #FDECF0,
-  "lighten-1":  #FDECF0,
+  "lighten-5":  #FDE0DB,
+  "lighten-4":  #FABEBA,
+  "lighten-3":  #F79A84,
+  "lighten-2":  #F46F5A,
+  "lighten-1":  #E95337,
   "base":       $vol-red,
-  "darken-1":   #A90F33
+  "darken-1":   #DE2706,
+  "darken-2":   #D12400,
+  "darken-3":   #C52100,
+  "darken-4":   #B11D00,
+  "a-100":      #FF7E96,
+  "a-200":      #FF5975,
+  "a-400":      #FF3C6E,
+  "a-700":      #E11D2A
 );
 $pink: (
-  "lighten-2":  #FDECF1,
-  "lighten-1":  #FDECF1,
+  "lighten-5":  #FDE7ED,
+  "lighten-4":  #F9C2D2,
+  "lighten-3":  #F59AB4,
+  "lighten-2":  #F17296,
+  "lighten-1":  #EE5380,
   "base":       $vol-pink,
-  "darken-1":   #EB3569
+  "darken-1":   #E93061,
+  "darken-2":   #E52856,
+  "darken-3":   #E2224C,
+  "darken-4":   #D91741,
+  "a-100":      #FF80AB,
+  "a-200":      #FF4081,
+  "a-400":      #F50057,
+  "a-700":      #C51162
 );
 
 $purple: (
-  "lighten-2":  #EFECFE,
-  "lighten-1":  #EFECFE,
+  "lighten-5":  #F0EDFF,
+  "lighten-4":  #DAD2FE,
+  "lighten-3":  #C1B4FE,
+  "lighten-2":  #A895FD,
+  "lighten-1":  #957FFC,
   "base":       $vol-purple,
-  "darken-1":   #6749F5
+  "darken-1":   #7A60FC,
+  "darken-2":   #6F55FB,
+  "darken-3":   #654BFB,
+  "darken-4":   #523AFA,
+  "a-100":      #B388FF,
+  "a-200":      #7C4DFF,
+  "a-400":      #651FFF,
+  "a-700":      #6200EA
+);
+
+$rich-purple:(
+  "lighten-1":  #211C41,
+  "base":       $vol-rich-purple,
+  "darken-1":   #14112A,
+  "darken-2":   #0B091C,
 );
 
 $blue: (
-  "lighten-2":  #AEF1FF,
-  "lighten-1":  #AEF1FF,
+  "lighten-5":  #E3F2FD,
+  "lighten-4":  #BBDEFB,
+  "lighten-3":  #90CAF9,
+  "lighten-2":  #64B5F6,
+  "lighten-1":  #42A5F5,
   "base":       $vol-blue,
-  "darken-1":   #01BADF
+  "darken-1":   #1E88E5,
+  "darken-2":   #1976D2,
+  "darken-3":   #1565C0,
+  "darken-4":   #0D47A1,
+  "a-100":      #82B1FF,
+  "a-200":      #448AFF,
+  "a-400":      #2979FF,
+  "a-700":      #2962FF
+
 );
 
 $teal: (
-  "lighten-2":  #CBF5F6,
-  "lighten-1":  #CBF5F6,
+  "lighten-5":  #EAF9FC,
+  "lighten-4":  #CAF1F7,
+  "lighten-3":  #A7E8F1,
+  "lighten-2":  #84DEEB,
+  "lighten-1":  #69D7E7,
   "base":       $vol-turquoise,
-  "darken-1":   #1FABAD
+  "darken-1":   #48CBE0,
+  "darken-2":   #3FC4DC,
+  "darken-3":   #36BED8,
+  "darken-4":   #26B3D0,
+  "a-100":      #84FFFF,
+  "a-200":      #18FFFF,
+  "a-400":      #00E5FF,
+  "a-700":      #00B8D4
 );
 
 $turquoise: (
-  "lighten-2":  #CBF5F6,
-  "lighten-1":  #CBF5F6,
+  "lighten-5":  #EAF9FC,
+  "lighten-4":  #CAF1F7,
+  "lighten-3":  #A7E8F1,
+  "lighten-2":  #84DEEB,
+  "lighten-1":  #69D7E7,
   "base":       $vol-turquoise,
-  "darken-1":   #1FABAD
+  "darken-1":   #48CBE0,
+  "darken-2":   #3FC4DC,
+  "darken-3":   #36BED8,
+  "darken-4":   #26B3D0,
+  "a-100":      #84FFFF,
+  "a-200":      #18FFFF,
+  "a-400":      #00E5FF,
+  "a-700":      #00B8D4
 );
 
 $green: (
-  "lighten-2":  #EDFCF5,
-  "lighten-1":  #EDFCF5,
+  "lighten-5":  #E7FAF4,
+  "lighten-4":  #C4F2E3,
+  "lighten-3":  #9DE9D1,
+  "lighten-2":  #76E0BE,
+  "lighten-1":  #58D9B0,
   "base":       $vol-green,
-  "darken-1":   #1DAF68
+  "darken-1":   #35CD9A,
+  "darken-2":   #2DC790,
+  "darken-3":   #26C186,
+  "darken-4":   #19B675,
+  "a-100":      #B9F6CA,
+  "a-200":      #69F0AE,
+  "a-400":      #00E676,
+  "a-700":      #00C853
 );
 
 $yellow: (
-  "lighten-2":  #FFF3D6,
-  "lighten-1":  #FFF3D6,
+  "lighten-5":  #FFF8E7,
+  "lighten-4":  #FFEEC4,
+  "lighten-3":  #FFE29D,
+  "lighten-2":  #FFD675,
+  "lighten-1":  #FFCE58,
   "base":       $vol-yellow,
-  "darken-1":   #E09D00
+  "darken-1":   #FFBF34,
+  "darken-2":   #FFB82C,
+  "darken-3":   #FFB025,
+  "darken-4":   #FFA318,
+  "a-100":      #FFE57F,
+  "a-200":      #FFD740,
+  "a-400":      #FFC400,
+  "a-700":      #FFAB00
 );
 
 $grey: (
-  "lighten-3":  #F4F8F9,
-  "lighten-2":  #C3CFDB,
-  "lighten-1":  #A1ACBA,
+  "lighten-5":  #FAFAFA,
+  "lighten-4":  #F5F5F5,
+  "lighten-3":  #EEEEEE,
+  "lighten-2":  #E0E0E0,
+  "lighten-1":  #BDBDBD,
   "base":       $vol-grey,
-  "darken-1":   #3A4E60,
-  "darken-2":   #211c41,
-  "darken-3":   #07060e
+  "darken-1":   #757575,
+  "darken-2":   #616161,
+  "darken-3":   #757575,
+  "darken-4":   #212121
+);
+
+$blue-grey: (
+  "lighten-5":  #E4E4E8,
+  "lighten-4":  #CFD8DC,
+  "lighten-3":  #B0BEC5,
+  "lighten-2":  #90A4AE,
+  "lighten-1":  #78909C,
+  "base":       $vol-blue-grey,
+  "darken-1":   #546E7A,
+  "darken-2":   #455A64,
+  "darken-3":   #37474F,
+  "darken-4":   #263238
 );
 
 
@@ -122,7 +238,9 @@ $transparent-shades: (
 $colors: (
   "pink": $pink,
   "purple": $purple,
+  "rich-purple": $rich-purple,
   "blue": $blue,
+  "blue-grey": $blue-grey,
   "teal": $teal,
   "green": $green,
   "yellow": $yellow,
@@ -134,6 +252,19 @@ $colors: (
 );
 
 
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown '#{name}' in $colors.";
+  @return null;
+}
 // Color Classes
 
 @each $color_name, $color in $colors {
@@ -148,13 +279,26 @@ $colors: (
       .border-#{$color_name} {
         border-color: $color_value !important;
       }
-      .btn.#{$color_name}:hover {
-        background-color: darken( $color_value, 7% ) !important;
+      .btn.#{$color_name}:hover, 
+      .btn-square.#{$color_name}:hover {
+         // background-color: darken( $color_value, 7% ) !important;
+         background-color:color($color_name, 'lighten-1')!important;
       }
-      .btn.text-#{$color_name}:hover {
-        color: darken( $color_value, 15% ) !important;
+      .btn.#{$color_name}:active,
+      .btn-square.#{$color_name}:active {
+         background-color:color($color_name, 'darken-1')!important;
       }
-      .btn.border-#{$color_name}:hover {
+      .btn.text-#{$color_name}:hover,
+      .btn-square.text-#{$color_name}:hover {
+        // color: darken( $color_value, 15% ) !important;
+        background-color:color($color_name, 'lighten-1')!important;
+      }
+      .btn.text-#{$color_name}:active,
+      .btn-square.text-#{$color_name}:active {
+        background-color:color($color_name, 'darken-1')!important;
+      }
+      .btn.border-#{$color_name}:hover,
+      .btn-square.border-#{$color_name}:hover {
         border-color: darken( $color_value, 15% ) !important;
       }
       a.text-#{$color_name}:hover {
@@ -164,6 +308,14 @@ $colors: (
     @else {
       .#{$color_name}.#{$color_type} {
         background-color: $color_value !important;
+      }
+      .btn.#{$color_name}.#{$color_type}:hover, 
+      .btn-square.#{$color_name}.#{$color_type}:hover {
+         background-color:lighten( $color_value, 7% )!important;
+      }
+      .btn.#{$color_name}.#{$color_type}:active,
+      .btn-square.#{$color_name}.#{$color_type}:active {
+         background-color: darken( $color_value, 7% ) !important;
       }
       .text-#{$color_name}.text-#{$color_type} {
         color: $color_value !important;
@@ -186,23 +338,29 @@ $colors: (
   .border-#{$color} {
     border-color: $color_value !important;
   }
-  .btn.border-#{$color} {
+  .btn.border-#{$color},
+  .btn-square.border-#{$color} {
     border-color: $color_value!important;
   }
-  .btn.border-#{$color}:hover {
+  .btn.border-#{$color}:hover,
+  .btn-square.border-#{$color}:hover {
     border-color: rgba($color_value, 0.3)!important;
   }
-  .btn.text-#{$color} {
+  .btn.text-#{$color},
+  .btn-square.text-#{$color} {
     color: $color_value!important;
   }
-  .btn.text-#{$color}:hover {
+  .btn.text-#{$color}:hover,
+  .btn-square.text-#{$color}:hover {
     color: $color_value!important;
     opacity: 1;
   }
-  .btn.#{$color} {
+  .btn.#{$color},
+  .btn-square.#{$color} {
     background-color: $color_value!important;
   }
-  .btn.#{$color}:hover {
+  .btn.#{$color}:hover,
+  .btn-square.#{$color}:hover {
     background-color: rgba($color_value, 0.7)!important;
   }
 }
@@ -220,19 +378,19 @@ $colors: (
   }
 }
 
-// usage: color("name_of_color", "type_of_color")
-// to avoid to repeating map-get($colors, ...)
-
-@function color($color, $type) {
-  @if map-has-key($colors, $color) {
-    $curr_color: map-get($colors, $color);
-    @if map-has-key($curr_color, $type) {
-      @return map-get($curr_color, $type);
-    }
-  }
-  @warn "Unknown '#{name}' in $colors.";
-  @return null;
-}
+//MOVED HIGHER UP IN CODE
+// // usage: color("name_of_color", "type_of_color")
+// // to avoid to repeating map-get($colors, ...)
+// @function color($color, $type) {
+//   @if map-has-key($colors, $color) {
+//     $curr_color: map-get($colors, $color);
+//     @if map-has-key($curr_color, $type) {
+//       @return map-get($curr_color, $type);
+//     }
+//   }
+//   @warn "Unknown '#{name}' in $colors.";
+//   @return null;
+// }
 
 
 // Borders

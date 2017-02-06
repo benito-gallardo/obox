@@ -11,7 +11,7 @@
   position: absolute;
   z-index: 999;
   will-change: width, height;
-
+  
   li {
     clear: both;
     color: $off-black;
@@ -22,8 +22,11 @@
     text-align: left;
     text-transform: none;
 
-    &:hover, &.active, &.selected {
+    &:hover:not(.optgroup), &.active, &.selected:not(.disabled) {
       background-color: $dropdown-hover-bg-color;
+      a,span{
+        color:#fff !important; 
+      }
     }
 
     &.active.selected {
@@ -54,5 +57,9 @@
       height: inherit;
       line-height: inherit;
     }
+  }
+  [type="checkbox"]:checked+label:before {
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
   }
 }
