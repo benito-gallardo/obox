@@ -759,7 +759,7 @@ if ($) {
           video.play();
         } else { // try iframe video
           var iFrame = $modal.find('iframe[src*="youtube.com"]').first();         
-  ​
+  
           if (iFrame.length > 0){
             var currSrc = $(iFrame).attr( 'src');
             if (currSrc.indexOf("autoplay=0") > -1) {
