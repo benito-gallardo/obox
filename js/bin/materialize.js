@@ -792,7 +792,7 @@ if ($) {
         });
       }
       else {
-        $.Velocity.hook($modal, "scaleX", 0.7);
+        //$.Velocity.hook($modal, "scaleX", 0.7);
         $modal.css({ top: options.starting_top });
         $modal.velocity({top: "10%", opacity: 1, scaleX: '1'}, {
           duration: options.in_duration,
